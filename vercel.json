@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/escrow/create",
+        "methods": ["POST"],
+        "dest": "/api/escrow/create.ts"
+      },
+      {
+        "src": "/api/escrow/([^/]+)",
+        "methods": ["GET"],
+        "dest": "/api/escrow/[id].ts"
+      },
+      {
+        "src": "/api/escrow/verify/([^/]+)",
+        "methods": ["POST"],
+        "dest": "/api/escrow/verify/[id].ts"
+      }
+    ],
+    "build": {
+      "env": {
+        "TS_NODE_PROJECT": "./tsconfig.json"
+      }
+    }
+  }

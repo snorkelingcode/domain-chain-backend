@@ -1,0 +1,21 @@
+{
+  "name": "domain-chain-be",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/json-schema": "^7.0.15",
+    "@types/node": "^20.17.19",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.0"
+  }
+}
