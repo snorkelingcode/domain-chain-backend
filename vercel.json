@@ -6,6 +6,11 @@
       "dest": "/api/index.ts"
     },
     {
+      "src": "/api/listings",
+      "methods": ["GET"],
+      "dest": "/api/listings/index.ts"
+    },
+    {
       "src": "/api/escrow/create",
       "methods": ["POST"],
       "dest": "/api/escrow/create.ts"
@@ -20,5 +25,14 @@
       "methods": ["POST"],
       "dest": "/api/escrow/verify/[id].ts"
     }
-  ]
+  ],
+  "env": {
+    "RPC_URL": "@rpc_url",
+    "PRIVATE_KEY": "@private_key",
+    "CONTRACT_ADDRESS": "@contract_address",
+    "REWARDS_TOKEN_ADDRESS": "@rewards_token_address",
+    "DNS_VERIFICATION_TOKEN": "@dns_verification_token",
+    "REGISTRAR_VERIFICATION_TOKEN": "@registrar_verification_token",
+    "BLOCKCHAIN_ORACLE_TOKEN": "@blockchain_oracle_token"
+  }
 }
