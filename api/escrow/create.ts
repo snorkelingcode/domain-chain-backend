@@ -21,7 +21,9 @@ export default async function handler(
       escrowId: receipt.events[0].args.escrowId.toString()
     });
   } catch (error) {
-    console.error('Error creating escrow:', error);
-    res.status(400).json({ error: error.message });
+    console.error('Error:', error);
+    res.status(400).json({ 
+      error: error instanceof Error ? error.message : 'An unknown error occurred' 
+    });
   }
 }

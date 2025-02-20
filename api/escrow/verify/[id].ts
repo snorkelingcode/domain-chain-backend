@@ -26,7 +26,9 @@ export default async function handler(
       score: verification.validity
     });
   } catch (error) {
-    console.error('Error verifying domain:', error);
-    res.status(400).json({ error: error.message });
+    console.error('Error:', error);
+    res.status(400).json({ 
+      error: error instanceof Error ? error.message : 'An unknown error occurred' 
+    });
   }
 }
